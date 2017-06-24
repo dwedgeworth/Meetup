@@ -1,4 +1,4 @@
-Meetup Finder
+## Meetup Finder
 
 ## Table of Contents
 
