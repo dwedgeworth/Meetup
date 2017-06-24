@@ -7,8 +7,7 @@ body {
 	background-color: #222930;
 	width: 100%;
 	margin: 0 auto;
-	min-width: 360px;
-}
+	min-width: 360px;}
 
 .header {
 	z-index: 9;
@@ -28,8 +27,7 @@ body {
 	box-shadow: 0 0 10px #777777;}
 
 .footer p {
-	color: #E9E9E9;
-}
+	color: #E9E9E9;}
 
 .footer {
 	color: #E9E9E9;
@@ -46,8 +44,6 @@ body {
     -moz-box-shadow: 0 0 10px #777777;
 	-webkit-box-shadow: 0 0 10px #777777;
 	box-shadow: 0 0 10px #777777;}
-
-
 
 h1 {
 	color: #E9E9E9;
@@ -72,14 +68,12 @@ div .map-container{
 	transform: translate(-49.5%);
     -moz-box-shadow: 0 0 10px #777777;
 	-webkit-box-shadow: 0 0 10px #777777;
-	box-shadow: 0 0 10px #777777;
-}
+	box-shadow: 0 0 10px #777777;}
 
 .googlemap {
 	width: 100%;
 	z-index: 10;
-	background-color: #222930;
-}
+	background-color: #222930;}
 
 #map {
   z-index: 10;
@@ -101,8 +95,7 @@ div .results-container{
 	width: 50%;
 	left: 50%;
 	position: relative;
-	transform: translate(-49%);
-}
+	transform: translate(-49%);}
 
 section .results {
 	z-index: 1;
@@ -149,12 +142,10 @@ fieldset {
 	line-height: 1.6em;}
 
 label, legend, h3 {
-	color: black;
-}
+	color: black;}
 
 h3, .footer{
-	font-style: italic;
-}
+	font-style: italic;}
 
 legend {
 	font-style: italic;

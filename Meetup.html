@@ -1,53 +1,51 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="Meetup.css">
-</head>
-<body>
+  <html>
+  <head>
+	  <title></title>
+	  <link rel="stylesheet" type="text/css" href="Meetup.css">
+  </head>
+  <body>
 
-  <div class="header">
-    <h1>Meetup Finder</h1>
-  </div>
+    <div class="header">
+      <h1>Meetup Finder</h1>
+    </div>
 
-  <section class="search"> 
-    <fieldset>
-      <form action=# method=# class="js-searchform">
-        <label for="query">Search:</label>
-        <input type="text" id="query" name="query" class="js-query">
-          <div>
-            <button type="submit">Find Your Meetup</button>
+    <section class="search"> 
+      <fieldset>
+        <form action=# method=# class="js-searchform">
+          <label for="query">Search:</label>
+          <input type="text" id="query" name="query" class="js-query">
+            <div>
+              <button type="submit">Find Your Meetup</button>
+            </div>
+        </form>
+      </fieldset>
+    </section>
+
+    <div class="googlemap">
+      <div class="map-container">
+        <div id="map"></div>
+      </div>  
+    </div>
+
+    <div id="content">
+      <aside>   
+         <section class="results">
+          <div class="results-container">
+            <div class="js-search-results"></div>
           </div>
-      </form>
-    </fieldset>
-  </section>
+        </section>  
+      </aside>
+    </div>
 
-  <div class="googlemap">
-    <div class="map-container">
-      <div id="map"></div>
-    </div>  
-  </div>
+    <div class="footer">
+      <p>&copy; Copyright 2017 - Derek Wedgeworth</p>
+    </div>
 
-  <div id="content">
-    <aside>   
-       <section class="results">
-        <div class="results-container">
-          <div class="js-search-results">
-    
-          </div>
-        </div>
-      </section>  
-    </aside>
-  </div>
-
-  <div class="footer">
-        <p>&copy; Copyright 2017 - Derek Wedgeworth</p>
-  </div>
-
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js"></script>
-  <script type="text/javascript" src="Meetup.js"></script>
-  <script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6UpzHcYdUAlHbMLDKyS2tov1dF3jZwa4&callback=initMap">
-</script>
-</body>
-</html>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="Meetup.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6UpzHcYdUAlHbMLDKyS2tov1dF3jZwa4&callback=initMap">
+    </script>
+  </body>
+  </html>

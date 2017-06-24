@@ -4,50 +4,46 @@ function displayMeetUpSearch(result){
   var markerLocations = [];
 
   //creates results div elements
-      for (var i=0; i<response.length; i++){
-       	var group = response[i];
-       	var eventName = group.name;
-       	var eventDescription = group.description;
-       	var eventWho = group.who;
-        var eventLink = group.link;
-        var eventCity = group.city;
-        var eventState = group.state;
-        var eventLat = group.lat;
-        var eventLon = group.lon;
-        var eventOrganizer = group.organizer.name;
-        var eventCategory = group.category.name;
-        var location = [eventName, eventLat, eventLon]
-        var markerLatLon = '{lat: ' + eventLat +', lng: ' + eventLon + '}';
+  for (var i=0; i<response.length; i++){
+    var group = response[i];
+    var eventName = group.name;
+    var eventDescription = group.description;
+    var eventCity = group.city;
+    var eventLat = group.lat;
+    var eventLon = group.lon;
+    var eventOrganizer = group.organizer.name;
+    var location = [eventName, eventLat, eventLon]
+    var markerLatLon = '{lat: ' + eventLat +', lng: ' + eventLon + '}';
 
-     	resultElement += 
-     	'<div class="js-group" Lat="' + eventLat + '" Lng="' + eventLon + '"><p>' + 
-     	  'Event Name: ' + eventName + '<br>' + 
-     	  'Event Organizer: ' + eventOrganizer + '<br>' + 
-     	  'City: ' + eventCity + '<br>' +
-     	  'Description: ' + eventDescription + '<br>' +
-     	  '</p></div>';
+    resultElement += 
+    '<div class="js-group" Lat="' + eventLat + '" Lng="' + eventLon + '"><p>' + 
+    'Event Name: ' + eventName + '<br>' + 
+    'Event Organizer: ' + eventOrganizer + '<br>' + 
+    'City: ' + eventCity + '<br>' +
+    'Description: ' + eventDescription + '<br>' +
+    '</p></div>';
 
-     	 markerLocations.push(location);
-      };
+     markerLocations.push(location);
+  };
    
    //variables for GoogleMaps Creation	
-   var myLatlng = new google.maps.LatLng(markerLocations[0][1], markerLocations[0][2]);
-   var mapOptions = {
-     zoom: 11,
-     center: myLatlng,
-     zoomControl:true,
-     mapTypeControl: true,
-     mapTypeControlOptions: {
-     	style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
-     	position: google.maps.ControlPosition.TOP_LEFT
+  var myLatlng = new google.maps.LatLng(markerLocations[0][1], markerLocations[0][2]);
+  var mapOptions = {
+    zoom: 11,
+    center: myLatlng,
+    zoomControl:true,
+    mapTypeControl: true,
+    mapTypeControlOptions: {
+     style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+     position: google.maps.ControlPosition.TOP_LEFT
      },
-     mapTypeId: google.maps.MapTypeId.ROADMAP
-   }
-   var map;
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  }
+  var map;
    
-   //create Google Map
-   function initializeMap(){
-     map = new google.maps.Map(document.getElementById('map'), mapOptions);
+  //create Google Map
+  function initializeMap(){
+    map = new google.maps.Map(document.getElementById('map'), mapOptions);
   }
   
   var markers = []
@@ -67,7 +63,7 @@ function displayMeetUpSearch(result){
   }
 
   function clearMarkers() {
-        setMapOnAll(null);
+    setMapOnAll(null);
   }
 
   $(document).ready(function(){
@@ -89,8 +85,6 @@ function displayMeetUpSearch(result){
   initializeMap();
   $('.js-search-results').html(resultElement);
 }
-
-
 
 function watchFormSubmit(){
   $('.js-searchform').submit(function(event){
@@ -118,10 +112,3 @@ function initMap() {
 $(document).ready(function(){
   watchFormSubmit();
 });
-
-//Meetup API Key = '32269d54b4474693b437c343461'
-//GoogleMaps API Key = 'AIzaSyB6UpzHcYdUAlHbMLDKyS2tov1dF3jZwa4'
-//https://www.raymondcamden.com/2015/11/20/using-the-meetup-api-in-client-side-applications
-//html element with Marker https://stackoverflow.com/questions/26587533/how-to-highlight-map-marker-upon-selection-of-an-html-element/26588306
-// https://stackoverflow.com/questions/3059044/google-maps-js-api-v3-simple-multiple-marker-example
-// https://developers.google.com/maps/documentation/javascript/examples/marker-remove
