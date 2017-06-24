@@ -3,7 +3,7 @@ Meetup Finder
 ## Table of Contents
 
   - [Summary](#summary)
-  - [Usage](#usage)
+  - [Technology](#technology)
   - [Optional Dependencies](#optional-dependencies)
   - [How It Works](#how-it-works)
 
